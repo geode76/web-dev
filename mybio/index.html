@@ -10,24 +10,31 @@
 				margin: 0;
 				padding: 0;
 			}
+			html body {
+				height: 100%;
+			}
+			body {
+					min-height:100%;
+					display:flex;
+					flex-direction:column;
+			}
+			.wrapper {
+					flex:1;
+			}
 			.main-header {
 				background-color: #CCC;
 				height: 50px;
-				width: calc(100% - 30px);
-				padding: 5px 15px
+				width: 70%;
+				padding: 5px 15%
 			}
 			.main-header h1 {
 				line-height: 50 px;
 			}
 			.footer {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				left: 0;
 				height: 50px;
 				background-color: #CCC;
 			}
-			span.logo {
+			span {
 				color:blue;
 			}
 			.copyright {
@@ -46,14 +53,14 @@
 			.content-top {
 				60%;
 				height: 180px;
-				background-color: #FFF;
+				background-color: #CCC;
 				margin: 10px 0;
-				border: 1px solid #CCC;
 			}
 			.content-bio {
 				position: relative;
-				background-color: #FFF;
-				width: 800px;
+				background-color: #AAA;
+				width: 70%;
+				max-width: 980px;
 				height: 180px;
 				margin: 0 auto;
 			}
@@ -68,8 +75,12 @@
 				left: 170px;
 			}
 			.content-bottom {
-				position: relative;
-			}
+					overflow: auto;
+					width: 70%;
+					max-width: 980px;
+					position: relative;
+					margin: 0 auto;
+				}
 			.sidebar {
 				float: left;
 				background-color: #F1F1F1;
@@ -78,6 +89,7 @@
 			}
 			.main-content {
 				float: right;
+				background-color: green;
 				width: 71%;
 				height: 500px;
 				padding: 0 2% 0 2%;
@@ -104,44 +116,43 @@
 		</style>
 	</head>
 	<body>
-		<header class="main-header box-shadow">
-			<span class = "logo">
-				<h1>Allen Huddleston</h1>
-			</span>
-		</header>
-		<section class ="content-top">
-			<article class="content-bio">
-				<img src="./images/mypic.png" alt="my pic">
-				<div class="bio-text">
-					<h1>My Biography</h1>
-					<p>
-							Lorem ipsum dolor sit amet, mauris dui diam magna, tellus fermentum dis, ullamcorper ut eget id condimentum sapien
-							egestas, a libero lacinia et elit class imperdiet. Dolore nunc vestibulum nulla, ut ac dignissim amet, sapien a sit
-							parturient aliquam, sed velit magna justo.
-					</p>
-				</div>
-			</article>
-		</section>
-		<section class = "content-bottom">
-			<aside class= "sidebar">
-				<ul class = "sidebar-links">
-					<li><a href="http://www.google.com" target=_blank>Google</a></li>
-					<li><a href="http://www.fresnostate.edu/" target =_blank>Fresno State</a></li>
-					<li><a href="https://www.prezi.com/login" target=_blank>Prezi</a></li>
-					<li><a href="https://www.amazon.com" target =_blank>Amazon.com</a></li>
-					<li><a href="http://www.gameinformer.com" target =_blank>GameInformer</a></li>
-					<li><a href="http://www.gamestop.com" target = _blank>Game Stop</a></li>
-			</aside>
-			<article class: "main-content">
-				<div></div>
-				<div></div>
-			</article>
-		</section>
-
+		<div class="wrapper">
+			<header class="main-header box-shadow">
+				<span>
+					<h1>Allen Huddleston</h1>
+				</span>
+			</header>
+			<section class ="content-top">
+				<article class="content-bio">
+					<img src="./images/mypic.jpeg" alt="my pic">
+					<div class="bio-text">
+						<h1>My Biography</h1>
+						<p>
+								Lorem ipsum dolor sit amet, mauris dui diam magna, tellus fermentum dis, ullamcorper ut eget id condimentum sapien
+								egestas, a libero lacinia et elit class imperdiet. Dolore nunc vestibulum nulla, ut ac dignissim amet, sapien a sit
+								parturient aliquam, sed velit magna justo.
+							</p>
+						</div>
+					</article>
+				</section>
+				<section class = "content-bottom">
+					<aside class= "sidebar">
+						<ul class = "sidebar-links">
+							<li><a href="http://www.google.com" target=_blank>Google</a></li>
+							<li><a href="http://www.fresnostate.edu/" target =_blank>Fresno State</a></li>
+							<li><a href="https://www.prezi.com/login" target=_blank>Prezi</a></li>
+							<li><a href="https://www.amazon.com" target =_blank>Amazon.com</a></li>
+							<li><a href="http://www.gameinformer.com" target =_blank>GameInformer</a></li>
+							<li><a href="http://www.gamestop.com" target = _blank>Game Stop</a></li>
+						</aside>
+					<article class = "main-content">
+						<div></div>
+						<div></div>
+					</article>
+				</section>
+			</div>
 		<footer class ="footer">
-			<span>
 				<p class="copyright">(c) Created by Allen Huddleston</p>
-			</span>
 		</footer>
 	</body>
 </html>
